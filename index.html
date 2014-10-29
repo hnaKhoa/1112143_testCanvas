@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<head>
+
+	<meta charset="utf-8">
+	
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<!-- Important stuff for SEO, don't neglect. (And don't dupicate values across your site!) -->
+	<title>Magic video</title>
+	
+	<!-- concatenate and minify for production -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	
+</head>
+
+<body>
+
+<div class="wrapper"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
+
+	<header>
+		
+		<h1>Using canvas in HTML5 - Lập trình ảnh và video</h1>
+        <h2>
+            Convoluntion filter
+            <input id="btnNormal" type="button" value="Normal" onclick="Normal()" />
+            <input id="btnLaplace" type="button" value="Laplace" onclick="LaplaceFilter();"/>
+            <input id="btnCanny" type="button" value="Canny" onclick="CannyFilter();" />
+            <input id="btnEmboss" type="button" value="Emboss" onclick="EmbossFilter()" />
+            <input id="btnGrayscale" type="button" value="Grayscale" onclick="Grayscale()" />
+        </h2>
+            <form method="post" enctype="multipart/form-data" action="/Video">
+                &nbsp; How to use: press play the demo video, then choose a button above to show video with filter.</form>
+		<video id="v" controls loop>
+            <source src=small.mp4 type=video/mp4>
+        </video>
+
+        <canvas id="c"></canvas>
+	
+	</header>
+	
+	
+	<aside>
+        <div>
+            <textarea id="taShowFilter" cols="40" rows="2"></textarea>
+        </div>
+	
+	</aside>
+	
+	<footer>
+		
+		<p><small>&copy; Copyright Huynh Nguyen Anh Khoa 1112143 18/10/2014. All Rights Reserved.</small></p>
+		
+	</footer>
+
+</div>
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='assets/js/libs/jquery-1.11.0.min.js'>\x3C/script>")</script>
+
+<!-- this is where we put our custom functions -->
+<!-- don't forget to concatenate and minify if needed -->
+<script src="assets/js/functions.js"></script>
+
+  
+</body>
+</html>
